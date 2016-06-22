@@ -98,6 +98,7 @@ public class CAplication {
         //ManejoArchivos.CrearArchivo(ArchivoSalida);
         //ManejoArchivos.EscribeDeNuevo(ArchivoSalida, columna.trim());
         operacionesFile.CrearArchivo(ArchivoSalida);
+        
 
 
         
@@ -114,15 +115,18 @@ public class CAplication {
              for(j = (palabras - 1); j >= (((palabras - 1) - 5) + 1); j--){
     //           words[j] = words[j].replaceAll( "\\s+","");
     //             arreglo1[l] = Float.parseFloat(words[j]);
-                 System.out.println(words[j]+"\n");
+    //           System.out.println(words[j]);
                  arreglo1[l] = words[j];
+                 operacionesFile.EscribeDeNuevo(ArchivoSalida, arreglo1[l]);
+                 operacionesFile.EscribeDeNuevo(ArchivoSalida, "\n");
+                 System.out.println(arreglo1[l]);
                  l = l + 1;
                  
              }
              
              if (i == (130*k + m)){
                  
-                 i = i + 4;
+                 i = i + 3;
                  m = m + 3;
                  k++;
                  
@@ -145,8 +149,8 @@ public class CAplication {
         System.out.print(arreglo1[(130*130 -3)]);
                 System.out.println("\n");
         System.out.print(arreglo1[(130*130 -4)]);
+                    
         
-       
     }
     
     
