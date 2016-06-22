@@ -147,22 +147,38 @@ public class CAplication {
             
         }
         
+        for (j=1;j<=((130*130-5)/5); j=j+5){
+            
+            for (i=1; i<=5; i++){
+                
+                
+                operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+                operacionesFile.EscribeDeNuevo(ArchivoSalida2, "\n");
+                
+            }
+            
+
+            
+            
         
-        for (j=1;j<=(130*130-1); j++){
-            
-            i= (int) Math.ceil((double) j/5.0);
-            
-            System.out.println(i);
-            arreglo2[j-1]=arreglo1[i*5 - (j % 5)];
-            
-            operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
-            operacionesFile.EscribeDeNuevo(ArchivoSalida2, "\n");
-            
-            
-        }
-        arreglo2[130*130-1] = arreglo1[130*130-5];
-        operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+    }
         
+        
+//        for (j=1;j<=(130*130-1); j++){
+//            
+//            i= (int) Math.ceil((double) j/5.0);
+//            
+//            System.out.println(i);
+//            arreglo2[j-1]=arreglo1[i*5 - (j % 5)];
+//            
+//            operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+//            operacionesFile.EscribeDeNuevo(ArchivoSalida2, "\n");
+//            
+//            
+//        }
+//        arreglo2[130*130-1] = arreglo1[130*130-5];
+//        operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+//        
         
         
         
