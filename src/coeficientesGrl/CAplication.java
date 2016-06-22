@@ -145,7 +145,7 @@ public class CAplication {
         System.out.print(arreglo1[(130*130 -3)]);
                 System.out.println("\n");
         System.out.print(arreglo1[(130*130 -4)]);
-        123
+        
        
     }
     
