@@ -51,6 +51,8 @@ public class CAplication {
         String[] words;
 //        float[] arreglo1 = new float[130*130];
         String[] arreglo1 = new String[130*130];
+        String[] arreglo2 = new String[130*130];
+
         
         String ArchivoSalida = "verMos.out";
         String ArchivoSalida2 = "verMos2.out";
@@ -146,15 +148,32 @@ public class CAplication {
         }
         
         
+        for (j=1;j<=(130*130-1); j++){
+            
+            i= (int) Math.ceil((double) j/5.0);
+            
+            System.out.println(i);
+            arreglo2[j-1]=arreglo1[i*5 - (j % 5)];
+            
+            operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+            operacionesFile.EscribeDeNuevo(ArchivoSalida2, "\n");
+            
+            
+        }
+        arreglo2[130*130-1] = arreglo1[130*130-5];
+        operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+        
+        
+        
         
         System.out.println("\n");
-        System.out.print(arreglo1[(130*130 -1)]);
+        System.out.print(arreglo2[(130*130 -1)]);
                 System.out.println("\n");
-        System.out.print(arreglo1[(130*130 -2)]);
+        System.out.print(arreglo2[(130*130 -2)]);
                 System.out.println("\n");
-        System.out.print(arreglo1[(130*130 -3)]);
+        System.out.print(arreglo2[(130*130 -3)]);
                 System.out.println("\n");
-        System.out.print(arreglo1[(130*130 -4)]);
+        System.out.print(arreglo2[(130*130 -4)]);
                     
         
     }
