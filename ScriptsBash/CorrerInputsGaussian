@@ -1,0 +1,11 @@
+#!/bin/bash
+MAX=3000
+
+for i in `seq 1 ${MAX}`
+do
+g09 ../ArchivosSalida/InputsGaussian/PruebaFrame${i}.input
+wait
+echo Chk Frame ${i} Listo\!
+done
+
+

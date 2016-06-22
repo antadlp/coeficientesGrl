@@ -1,0 +1,8 @@
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"      parameter (nmax=3000)");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"\n");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"      parameter (maxt=50000)");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"\n");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"      parameter (m1=1000000)");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"\n");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"      parameter (maxchr=100, maxtok=10)");
+ManejoArchivos.EscribeDeNuevo(archivonuevo,"\n");

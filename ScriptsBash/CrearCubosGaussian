@@ -1,0 +1,10 @@
+#!/bin/bash
+MAX=3000
+
+for i in `seq 1 ${MAX}`
+do
+cubegen 0 Potential=SCF ../ArchivosSalida/ArchivosFCHK/PruebaFrame${i}.fchk ../ArchivosSalida/ArchivosCUBO/PruebaFrame${i}ESP.cube 0 h
+wait
+echo cubo Frame ${i} Listo\!
+done
+

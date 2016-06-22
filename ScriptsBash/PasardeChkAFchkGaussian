@@ -1,0 +1,13 @@
+#!/bin/bash
+MAX=3000
+
+for i in `seq 1 ${MAX}`
+do
+formchk ../ArchivosSalida/ArchivosCHK/PruebaFrame${i}.chk ../ArchivosSalida/ArchivosFCHK/PruebaFrame${i}.fchk 
+wait
+echo Fchk Frame ${i} Listo\!
+echo $'\n'
+done
+
+
+
