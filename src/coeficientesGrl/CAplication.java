@@ -53,6 +53,8 @@ public class CAplication {
         String[] arreglo1 = new String[130*130];
         
         String ArchivoSalida = "verMos.out";
+        String ArchivoSalida2 = "verMos2.out";
+
 
         int palabras;
         int lineaFinalMos;
@@ -98,6 +100,7 @@ public class CAplication {
         //ManejoArchivos.CrearArchivo(ArchivoSalida);
         //ManejoArchivos.EscribeDeNuevo(ArchivoSalida, columna.trim());
         operacionesFile.CrearArchivo(ArchivoSalida);
+        operacionesFile.CrearArchivo(ArchivoSalida2);
         
 
 
@@ -123,6 +126,7 @@ public class CAplication {
                  l = l + 1;
                  
              }
+
              
              if (i == (130*k + m)){
                  
@@ -140,6 +144,8 @@ public class CAplication {
              
             
         }
+        
+        
         
         System.out.println("\n");
         System.out.print(arreglo1[(130*130 -1)]);
