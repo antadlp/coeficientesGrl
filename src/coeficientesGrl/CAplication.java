@@ -52,10 +52,13 @@ public class CAplication {
 //        float[] arreglo1 = new float[130*130];
         String[] arreglo1 = new String[130*130];
         String[] arreglo2 = new String[130*130];
+        String[] arreglo3 = new String[130*130];
+
 
         
         String ArchivoSalida = "verMos.out";
         String ArchivoSalida2 = "verMos2.out";
+        String ArchivoSalida3 = "verMos3.out";
 
 
         int palabras;
@@ -103,6 +106,7 @@ public class CAplication {
         //ManejoArchivos.EscribeDeNuevo(ArchivoSalida, columna.trim());
         operacionesFile.CrearArchivo(ArchivoSalida);
         operacionesFile.CrearArchivo(ArchivoSalida2);
+        operacionesFile.CrearArchivo(ArchivoSalida3);
         
 
 
@@ -147,21 +151,37 @@ public class CAplication {
             
         }
         
-        for (j=1;j<=((130*130-5)/5); j=j+5){
+        k = 0;
+        for (l=0;l<=(130*130-1); l=l+5){
             
-            for (i=1; i<=5; i++){
+            for(j=5; j>=1; j--){
                 
-                
-                operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[j-1]);
+                arreglo2[k]=arreglo1[(l + j)-1];
+                operacionesFile.EscribeDeNuevo(ArchivoSalida2, arreglo2[k]);
                 operacionesFile.EscribeDeNuevo(ArchivoSalida2, "\n");
+                k++;
                 
             }
-            
-
-            
-            
-        
+             
     }
+        
+        l=0;
+        for(i=0; i<=125; i+=5){
+            for(j=0;j<=25;j++){
+                for(k=1;k<=5;k++){
+                    System.out.println(i);
+                    arreglo3[l]=arreglo2[(j*(130*5))+(i)+k-1];
+                    operacionesFile.EscribeDeNuevo(ArchivoSalida3, arreglo3[l]);
+                    operacionesFile.EscribeDeNuevo(ArchivoSalida3, "\n");
+                    l++;
+                }
+            }
+        }
+        
+        
+
+        
+        
         
         
 //        for (j=1;j<=(130*130-1); j++){
