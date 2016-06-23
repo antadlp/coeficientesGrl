@@ -166,7 +166,7 @@ public class CAplication {
     }
         
         l=0;
-        for(i=0; i<=125; i+=5){
+        for(i=0; i<=645; i+=5){
             for(j=0;j<=25;j++){
                 for(k=1;k<=5;k++){
                     System.out.println(i);
